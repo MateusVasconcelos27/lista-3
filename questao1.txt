@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("quantos baus voce quer abrir ?: ")
+        int tiposDeBau = int.Parse(Console.ReadLine());
+
+        int[] bausPorTipo = new int[tiposDeBau]
+        int[,] bausPorTipo = new int[tiposDeBau, 2]
+
+        for (int i = 0; < tiposDeBau; i++)
+        {
+            Console.WriteLine($"\nConfiguração para o tipo {i + 1}:");
+            Console.Write("Digite o numero minimo de itens raros pra esse tipo de bau: ")
+            itensPorTipo[i, 0] = int.Parse(Console.ReadLine());
+            Console.Write("digite o numero maximo de itens raros para esse tipo de bau: ")
+            itensPorTipo[i, 1] = int.Parse(Console.ReadLine());
+            Console.Write($"quantos baus do tipo {i + 1} voce deseja abrir?: ")
+            bausPorTipo[i] = int.Parse(Console.ReadLine());
+            
+        }
+        Random random = new Random();
+        int totalItensRaros 
+        for (int i = 0; i < tiposDeBau; i++)
+        {
+            for (int j = 0;j < bausPorTipo[i];j++)
+            {
+                int itensObtidos = random.Next(itens)
+            }
+        }
+
+
+
+
+    }
+}
