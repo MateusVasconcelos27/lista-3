@@ -1,0 +1,56 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write ("quantas missoes voce completou?: ")
+        int numeroMissoes = int.Parse(Console.ReadLine());
+
+        int pontuacaoTotal = 0
+
+        for (int i = 1; i <= numeroMissoes; i++)
+        {
+            console.WriteLine($"\nMissão {i}:");
+
+            console.Write("qual o nivel de dificuldade (facil/medio/dificil): ")
+
+            string dificuldade = Console.ReadLine().Trim().ToLower();
+
+            
+            Console.Write("Quantos inimigos você derrotou nesta missão? ");
+            int inimigosDerrotados = int.Parse(Console.ReadLine());
+
+            
+            int pontosPorInimigo;
+            switch (dificuldade)
+            {
+                case "fácil":
+                    pontosPorInimigo = 50;
+                    break;
+                case "médio":
+                    pontosPorInimigo = 100;
+                    break;
+                case "difícil":
+                    pontosPorInimigo = 150;
+                    break;
+                default:
+                    Console.WriteLine("Dificuldade inválida. Será considerado nível Fácil por padrão.");
+                    pontosPorInimigo = 50;
+                    break;
+            }
+
+            
+            int pontuacaoMissao = inimigosDerrotados * pontosPorInimigo;
+            pontuacaoTotal += pontuacaoMissao;
+
+            Console.WriteLine($"Pontuação da Missão {i}: {pontuacaoMissao} pontos");
+        }
+
+        
+        Console.WriteLine($"\nPontuação total: {pontuacaoTotal} pontos");
+    }
+}
+        }
+    }
+}
