@@ -1,0 +1,59 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Por quantos dias consecutivos você logou no jogo? ");
+        int diasConsecutivos = int.Parse(Console.ReadLine());
+
+        
+        Console.Write("Qual é a recompensa inicial em moedas no primeiro dia? ");
+        int recompensaInicial = int.Parse(Console.ReadLine());
+
+        
+        Console.Write("Qual é o incremento da recompensa a cada dia consecutivo? ");
+        int incremento = int.Parse(Console.ReadLine());
+
+        
+        int totalMoedas = 0;
+        int recompensaDiaria = recompensaInicial;
+
+        
+        Console.Write("Deseja considerar bônus por marcos de dias? (Sim/Não): ");
+        string respostaBonus = Console.ReadLine().Trim().ToLower();
+
+        int intervaloBonus = 0;
+        int valorBonus = 0;
+
+        if (respostaBonus == "sim")
+        {
+            
+            Console.Write("A cada quantos dias consecutivos há um bônus? ");
+            intervaloBonus = int.Parse(Console.ReadLine());
+
+            Console.Write("Qual é o valor do bônus? ");
+            valorBonus = int.Parse(Console.ReadLine());
+        }
+
+        
+        for (int dia = 1; dia <= diasConsecutivos; dia++)
+        {
+            totalMoedas += recompensaDiaria;
+
+            
+            if (respostaBonus == "sim" && dia % intervaloBonus == 0)
+            {
+                totalMoedas += valorBonus;
+                Console.WriteLine($"Bônus de {valorBonus} moedas aplicado no dia {dia}!");
+            }
+
+            
+            recompensaDiaria += incremento;
+        }
+
+        
+        Console.WriteLine($"\nTotal de moedas acumuladas: {totalMoedas}");
+    }
+}
