@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("quantos tipos diferentes de itens voce deseja armazenar no seu inventario: ")
+        int numerosTipo = int.Parse(Console.ReadLine()) 
+        Dictionary<string, int> inventario = new Dictionary<string, int>();
+        for (int i = 0; i < numerosTipo; i++)
+        Console.Write($"nome do iten {i + 1}: ")
+        string nomeIten = Console.ReadLine();
+        Console.Write($"quantidade de {nomeIten}: ")
+        int quantidade = int.Parse(Console.ReadLine());
+        inventario[nomeIten] = quantidade;
+        Console.Write("qual a capacidade maxima do seu inventario?: ")
+        int capacidadeMaxima = int.Parse(Console.ReadLine());
+        int quantidadeTotal = 0; 
+        foreach (var iten in inventario)
+        {
+            quantidadeTotal += iten.Value
+        }
+        Console.WriteLine($"quantidade total de itens no inventario: {quantidadeTotal}");
+        if (quantidadeTotal > capacidadeMaxima)
+        {
+            Console.WriteLine("capacidade do inventario execida")
+        }
+
+        else
+        {
+            Console.WriteLine("capacidade do inventario dentro do limite.")
+        }
+    }
+
+
+}
