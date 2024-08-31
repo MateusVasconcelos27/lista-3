@@ -1,0 +1,26 @@
+using System
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("quantas fases voce quer jogar?: ")
+        int quantidadeDeFases = int.Parse(Console.Readline());
+        int pontosDeVida = 0
+        for (int i = 1; i <= quantidadeDeFases; i++)
+        Console.Writeline($"\nFase{i}:")
+        Console.Write("quantos pontos de vida o heroi perdeu ou ganhou? (valores positivos para ganhos e valores negativos para perdas): ")
+        int pontosDeVida = int.Parse(Console.Readline());
+        for (int pontosDeVida += pontos)
+        Console.Write("o heroi ussou um iten de cura? (sim/não): ")
+        string respostaCura = Console.Readline().Trim().ToLower();
+        if (respostaCura == "sim")
+        {
+            Console.Write("Quantos pontos de cura foram usados? ")
+            int pontosDeCura == int.Parse(Console.Readline());
+            pontosDeVida += pontosDeCura
+        }
+
+        
+    }
+}
